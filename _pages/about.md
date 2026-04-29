@@ -2,33 +2,35 @@
 layout: about
 title: about
 permalink: /
-subtitle: <a href='#'>Affiliations</a>. Address. Contacts. Motto. Etc.
+subtitle: PhD student, <a href='https://www.bme.jhu.edu/'>Biomedical Engineering</a>, Johns Hopkins University. <a href='mailto:hslee343@gmail.com'>hslee343@gmail.com</a>.
 
 profile:
   align: right
   image: prof_pic_hsl.png
-  image_circular: false # crops the image to make it circular
+  image_circular: false
   more_info: >
-    <p>555 your office number</p>
-    <p>123 your address street</p>
-    <p>Your City, State 12345</p>
+    <p>Computational Biophotonics Lab</p>
+    <p>Johns Hopkins Medical Institute</p>
+    <p>1775 E Monument St, Baltimore, MD 21287</p>
 
-selected_papers: true # includes a list of papers marked as "selected={true}"
-social: true # includes social icons at the bottom of the page
+selected_papers: true
+social: true
 
 announcements:
-  enabled: true # includes a list of news items
-  scrollable: true # adds a vertical scroll bar if there are more than 3 news items
-  limit: 5 # leave blank to include all the news in the `_news` folder
+  enabled: true
+  scrollable: true
+  limit: 5
 
 latest_posts:
-  enabled: true
-  scrollable: true # adds a vertical scroll bar if there are more than 3 new posts items
-  limit: 3 # leave blank to include all the blog posts
+  enabled: false
+  scrollable: true
+  limit: 3
 ---
 
-Write your biography here. Tell the world about yourself. Link to your favorite [subreddit](http://reddit.com). You can put a picture in, too. The code is already in, just name your picture `prof_pic.jpg` and put it in the `img/` folder.
+Hi, I'm Emily — a first-year PhD student in [Biomedical Engineering](https://www.bme.jhu.edu/) at Johns Hopkins University, where I'm advised by [Nicholas Durr](https://durr.jhu.edu/) in the [Computational Biophotonics Lab](https://durr.jhu.edu/). I work at the intersection of **machine learning and medical imaging**, with a focus on building diagnostic and sensing systems that are efficient on edge devices, robust across patient populations and imaging conditions, and aware of their own uncertainty.
 
-Put your address / P.O. box / other info right below your picture. You can also disable any of these elements by editing `profile` property of the YAML header of your `_pages/about.md`. Edit `_bibliography/papers.bib` and Jekyll will render your [publications page](/al-folio/publications/) automatically.
+My current work spans two threads. The first is **computational optical imaging**: I'm developing a smartphone-based nailfold capillaroscopy system for non-invasive hemoglobin estimation, where physiological variation — skin tone, finger curvature, illumination — becomes a first-class design constraint rather than an afterthought. The second is **adaptive inference for medical vision**: with [Rama Chellappa's](https://engineering.jhu.edu/faculty/rama-chellappa/) group, I co-led an adaptive inference framework for medical Vision Transformers that combines token reduction with early exiting to allocate compute based on input difficulty while preserving diagnostic accuracy.
 
-Link to your social media connections, too. This theme is set up to use [Font Awesome icons](https://fontawesome.com/) and [Academicons](https://jpswalsh.github.io/academicons/), like the ones below. Add your Facebook, Twitter, LinkedIn, Google Scholar, or just disable all of them.
+Before grad school, I completed my B.S. in Biomedical Engineering and Computer Science at Johns Hopkins (2025) and am finishing my M.S. in BME this spring. Along the way I co-founded [OcuSound](#), where we built a low-cost acoustic tonometer for at-home glaucoma monitoring and ran feasibility studies at the Aravind Eye Hospital in Pondicherry, India; interned at [Clear Guide Medical](https://www.clearguidemedical.com/) on image-guided intervention; and worked with Samsung's imaging engineers on smartphone diagnostics across diverse skin tones and lighting conditions.
+
+I grew up between Korea, China, and an American international school — an experience that shaped how I think about systems that don't work equally well for everyone, and how I approach building tools that respond to those differences. Outside of research I [enjoy / hobby placeholder]. Always happy to chat about computational imaging, robust medical AI, or how research ideas become devices that reach patients — feel free to [reach out](mailto:hslee343@gmail.com).
