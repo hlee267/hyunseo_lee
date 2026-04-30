@@ -1,4 +1,4 @@
 User-agent: *
 Disallow:
 
-Sitemap: https://hlee267.github.io/blog//sitemap.xml
+Sitemap: https://hlee267.github.io/hyunseo_lee/sitemap.xml
