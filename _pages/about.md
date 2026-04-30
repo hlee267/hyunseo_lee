@@ -30,4 +30,4 @@ My current work spans two threads. The first is **computational optical imaging*
 
 Outside of research, I enjoy playing volleyball and soccer, bingeing Netflix shows, and cooking Korean food. Always happy to chat about computational imaging, robust medical AI, or how research ideas become devices that reach patients — feel free to [reach out](mailto:hslee343@gmail.com).
 
-**My interests:** Medical Imaging, Computational Optical Imaging, Nailfold Capillaroscopy, Vision Transformers, Smartphone Diagnostics, Robust Medical AI, Biomedical Optics, Non-invasive Blood Analysis.
+**My interests:** Medical Imaging, Computational Optical Imaging, Nailfold Capillaroscopy, Vision Transformers, Smartphone Diagnostics, Robust Medical AI.

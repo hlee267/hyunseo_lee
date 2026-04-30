@@ -8,14 +8,16 @@ middle_name:
 last_name: Lee
 contact_note: hlee267@jh.edu (Email) | 410-336-0453
 description: > # the ">" symbol means to ignore newlines until "footer_text:"
-  A simple, whitespace theme for academics. Based on [*folio](https://github.com/bogoli/-folio) design.
+  Hyun Seo (Emily) Lee — first-year Biomedical Engineering PhD student
+  at Johns Hopkins University. Research at the intersection of machine
+  learning and medical imaging.
 footer_text: >
-keywords: academic-website, portfolio-website, BME PhD # add your own keywords or leave empty
+keywords: Hyun Seo Lee, Hyunseo Lee, Emily Lee, Johns Hopkins, JHU, BME, PhD, biomedical engineering, medical imaging, machine learning, computational imaging
 lang: en # the language of your site (for example: en, fr, cn, ru, etc.)
 icon: > # the emoji used as the favicon (alternatively, provide image name in /assets/img/)
 
 url: https://hlee267.github.io # the base hostname & protocol for your site
-baseurl: /hyunseo_lee # the subpath of your site, e.g. /blog/. Leave blank for root
+baseurl:  # the subpath of your site, e.g. /blog/. Leave blank for root
 last_updated: false # set to true if you want to display last updated in the footer
 impressum_path: # set to path to include impressum link in the footer, use the same path as permalink in a page, helps to conform with EU GDPR
 back_to_top: true # set to false to disable the back to top button
@@ -140,7 +142,7 @@ newsletter:
 
 collections:
   books:
-    output: true
+    output: false
   news:
     defaults:
       layout: post
