@@ -2,7 +2,7 @@
 layout: about
 title: about
 permalink: /
-subtitle:  <a href='https://www.bme.jhu.edu/'>Biomedical Engineering</a> PhD student, Johns Hopkins University.
+subtitle: <a href='https://www.bme.jhu.edu/'>Biomedical Engineering</a> PhD student, Johns Hopkins University.
 
 profile:
   align: right
