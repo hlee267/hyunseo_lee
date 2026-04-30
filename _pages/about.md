@@ -2,7 +2,7 @@
 layout: about
 title: about
 permalink: /
-subtitle: <a href='https://www.bme.jhu.edu/'>Biomedical Engineering</a> PhD student, Johns Hopkins University.
+subtitle: PhD student, <a href='https://www.bme.jhu.edu/'>Biomedical Engineering</a>, Johns Hopkins University. <a href='mailto:hslee343@gmail.com'>hslee343@gmail.com</a>.
 
 profile:
   align: right
@@ -17,7 +17,7 @@ selected_papers: true
 social: true
 
 announcements:
-  enabled: false
+  enabled: true
   scrollable: true
   limit: 5
 
