@@ -9,7 +9,7 @@ profile:
   image: prof_pic_hsl.png
   image_circular: false
   more_info: >
-    <p>Computational Biophotonics Lab</p>
+    <a href='mailto:hslee343@gmail.com'>hslee343@gmail.com</a>
     <p>Johns Hopkins Medical Institute</p>
     <p>1775 E Monument St, Baltimore, MD 21287</p>
 
