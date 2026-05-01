@@ -55,10 +55,10 @@ Skin is a layered, turbid medium. From the surface down:
 - **Dermis** (~90% of total thickness): collagen-and-elastin matrix, vascularized — this is where **hemoglobin** lives, and where most of the optical path length accumulates.
 - **Hypodermis**: subcutaneous fat, larger nerves and vessels, and mostly invisible to short-wavelength visible light.
 
-    </div>
 </div>
 
 Light hitting skin does three things, in roughly this order: reflects off the surface, absorbs as it travels, and scatters along the way.
+
 
 ### Reflection (~4–7% of incident light)
 
