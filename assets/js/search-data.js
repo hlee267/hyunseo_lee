@@ -37,22 +37,11 @@ ninja.data = [{
           handler: () => {
             window.location.href = "/cv/";
           },
-        },{id: "post-hello-world",
+        },{id: "post-skin-tone-optics-and-quantification-methods",
         
-          title: "hello, world",
+          title: "Skin Tone Optics and Quantification Methods",
         
-        description: "starting this blog as a place for short research notes and reflections from my phd.",
-        section: "Posts",
-        handler: () => {
-          
-            window.location.href = "/blog/2026/group-journal/";
-          
-        },
-      },{id: "post-skin-tone-optics-and-quantification-methods",
-        
-          title: "skin tone optics and quantification methods",
-        
-        description: "notes from my lab journal club on how light interacts with skin, why pulse oximeters under-perform on darkly pigmented patients, and how we can quantify skin pigmentation objectively.",
+        description: "Journal club on how light interacts with skin, why pulse oximeters under-perform on darkly pigmented patients, and how we can quantify skin pigmentation objectively.",
         section: "Posts",
         handler: () => {
           
