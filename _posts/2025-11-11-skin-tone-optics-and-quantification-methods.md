@@ -47,13 +47,13 @@ This isn't an obscure problem. I run into the same issue building a smartphone-b
             and hypodermis. <em>Image: Don Bliss / National Cancer Institute (public domain).</em>
         </div>
     </div>
-    <div class="col-md-7">
+    <div class="col-md-7" markdown="1">
 
-  Skin is a layered, turbid medium. From the surface down:
+Skin is a layered, turbid medium. From the surface down:
 
-  - **Epidermis** (~60–120 µm): protective barrier; contains melanocytes that produce **melanin** in melanosomes. Melanin is the dominant absorber in the visible range and the source of skin's color variation.
-  - **Dermis** (~90% of total thickness): collagen-and-elastin matrix, vascularized ; this is where **hemoglobin** lives, and where most of the optical path length accumulates.
-  - **Hypodermis**: subcutaneous fat, larger nerves and vessels, and mostly invisible to short-wavelength visible light.
+- **Epidermis** (~60–120 µm): protective barrier; contains melanocytes that produce **melanin** in melanosomes. Melanin is the dominant absorber in the visible range and the source of skin's color variation.
+- **Dermis** (~90% of total thickness): collagen-and-elastin matrix, vascularized — this is where **hemoglobin** lives, and where most of the optical path length accumulates.
+- **Hypodermis**: subcutaneous fat, larger nerves and vessels, and mostly invisible to short-wavelength visible light.
 
     </div>
 </div>
@@ -155,9 +155,7 @@ Two qualitative skin-color scales worth knowing about:
 
 Neither replaces a quantitative measurement (DRS, colorimeter, ITA), but Monk in particular is a reasonable choice when you need a discrete categorical variable — for stratifying clinical trials, training datasets, or human-rater protocols.
 
-## What I took away
-
-A few things stuck with me as I prepared this talk:
+## Take Aways:
 
 - **The pulse-ox bias has a clean physical explanation.** It isn't a black box. Once you've sat with the melanin and hemoglobin absorption spectra, the bias is almost predictable.
 - **One number is rarely enough.** ITA is a one-dimensional summary of a two-dimensional space; collapsing $$L^*$$ and $$b^*$$ into a single angle confounds melanin with blood volume in ways that matter clinically.

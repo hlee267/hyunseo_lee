@@ -5,14 +5,14 @@ date: 2026-03-26 12:00
 description: Journal club on why Beer–Lambert and diffusion theory fail in turbid tissue, and how Monte Carlo's hop–drop–spin loop gives us a much better picture of where photons actually go inside skin.
 tags: optics biophotonics monte-carlo simulation journal-club
 categories: notes
-featured: true
+featured: false
 toc:
   beginning: true
 ---
 
-I gave a journal club talk this spring on **Monte Carlo simulation for modeling light transport in tissue** — why simple analytical models break when we try to use them on a finger, what Monte Carlo actually does under the hood, and how it lets us simulate the photon paths through skin and capillaries that we care about for nailfold imaging. This post is a written-up version of that talk.
+I gave a journal club talk this spring on **Monte Carlo simulation for modeling light transport in tissue**, more specificially on why simple analytical models break when we try to use them on a finger, what Monte Carlo actually does under the hood, and how it lets us simulate the photon paths through skin and capillaries that we care about for nailfold imaging. 
 
-## Why I needed this in the first place
+## Introduction
 
 I work on a smartphone-based [nailfold capillaroscopy](https://durr.jhu.edu) system for non-invasive hemoglobin estimation. The setup is pretty intuitive: a green micro-LED back-illuminates the capillary loops at the base of the fingernail, and we use the **Beer–Lambert law** to relate the transmitted intensity to hemoglobin concentration along the optical path:
 
@@ -27,7 +27,7 @@ Beer–Lambert silently assumes:
 
 In real tissue, none of these are true. Photons scatter many times before being absorbed or detected; the effective path length is longer than the geometric thickness; and pressing harder on the finger redistributes capillaries and changes that path length dynamically. So the question I needed an answer to was: **if I can't write down a closed-form expression for where the light goes, can I simulate it instead?**
 
-## A quick refresher on optical properties
+## Optical Properties Recap
 
 Every layer of tissue has four numbers that govern its photon behavior:
 
@@ -38,7 +38,7 @@ Every layer of tissue has four numbers that govern its photon behavior:
 
 These are wavelength-dependent, which is why the device design (660 nm, 940 nm, green, etc.) interacts strongly with which depths and which chromophores we can actually see.
 
-## Why diffusion theory isn't enough
+## Diffusion Theory
 
 The textbook way to model bulk light transport is **diffusion theory**, which treats photons like a concentration that diffuses down a gradient:
 
@@ -52,7 +52,7 @@ It's fast, it's analytical, and it's a perfectly fine approximation when scatter
 
 Every interesting feature of the nailfold problem lives in one of those failure modes. So we need a method that doesn't make the diffusion assumption.
 
-## What Monte Carlo is, conceptually
+## Montec Carlo
 
 Monte Carlo simulation, [first developed by Stanislaw Ulam](https://en.wikipedia.org/wiki/Monte_Carlo_method) in the 1940s, solves problems by **repeated random sampling**. Instead of solving a global differential equation, you simulate the random walk of a single photon, then do that ten million times, and the macroscopic distribution of where photons end up becomes a numerical approximation to the true light field.
 
@@ -129,7 +129,7 @@ This is the version I actually need. I can place a real epidermis layer on top, 
 - *How deep can I see capillaries before contrast collapses?*
 - *What does pressing on the finger (which displaces capillaries) do to my measured intensity?*
 
-## Where this connects back to my project
+## Connecting Back to the Project
 
 My near-term plan is to use mcxyz to build **lookup tables** mapping observed image contrast and apparent vessel width to the underlying capillary depth and hemoglobin concentration. Right now my hemoglobin estimation pipeline assumes a Beer–Lambert path through homogeneous tissue; what I want is a forward model that says "if the capillary is at depth $d$ with hemoglobin $C$, the smartphone will see this intensity" — and then invert that. Monte Carlo gives me the forward model.
 
@@ -139,7 +139,7 @@ A few things I came away from this talk wanting to do:
 2. Build the capillary geometry parametrically (depth, diameter, orientation, density) so I can sweep the design space.
 3. Extend to varying skin pigmentation — which connects directly back to the [skin tone optics talk]({% post_url 2025-11-11-skin-tone-optics-and-quantification-methods %}) I gave last fall, since melanin in the epidermis attenuates illumination before it reaches the capillary bed at all.
 
-## What I took away
+## Take aways:
 
 - **Beer–Lambert is a clean rule that lies in turbid media.** The "path length" is a distribution, not a constant.
 - **Diffusion theory is fast and wrong in exactly the regimes I care about** — boundaries, sources, and localized absorbers.
