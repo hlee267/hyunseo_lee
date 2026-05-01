@@ -1,8 +1,8 @@
 ---
 layout: post
-title: monte carlo simulation for light transport in tissue
+title: Monte Carlo Simulation for Light Transport in Tissue
 date: 2026-03-26 12:00
-description: notes from my lab journal club on why Beer–Lambert and diffusion theory fail in turbid tissue, and how Monte Carlo's hop–drop–spin loop gives us a much better picture of where photons actually go inside skin.
+description: Journal club on why Beer–Lambert and diffusion theory fail in turbid tissue, and how Monte Carlo's hop–drop–spin loop gives us a much better picture of where photons actually go inside skin.
 tags: optics biophotonics monte-carlo simulation journal-club
 categories: notes
 featured: true

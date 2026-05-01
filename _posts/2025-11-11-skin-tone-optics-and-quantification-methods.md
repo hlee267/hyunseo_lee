@@ -49,21 +49,22 @@ This isn't an obscure problem. I run into the same issue building a smartphone-b
     </div>
     <div class="col-md-7">
 
-Skin is a layered, turbid medium. From the surface down:
+  Skin is a layered, turbid medium. From the surface down:
 
-- **Epidermis** (~60–120 µm): protective barrier; contains melanocytes that produce **melanin** in melanosomes. Melanin is the dominant absorber in the visible range and the source of skin's color variation.
-- **Dermis** (~90% of total thickness): collagen-and-elastin matrix, vascularized — this is where **hemoglobin** lives, and where most of the optical path length accumulates.
-- **Hypodermis**: subcutaneous fat, larger nerves and vessels — mostly invisible to short-wavelength visible light.
+  - **Epidermis** (~60–120 µm): protective barrier; contains melanocytes that produce **melanin** in melanosomes. Melanin is the dominant absorber in the visible range and the source of skin's color variation.
+  - **Dermis** (~90% of total thickness): collagen-and-elastin matrix, vascularized ; this is where **hemoglobin** lives, and where most of the optical path length accumulates.
+  - **Hypodermis**: subcutaneous fat, larger nerves and vessels, and mostly invisible to short-wavelength visible light.
 
     </div>
 </div>
 
 Light hitting skin does three things, in roughly this order: reflects off the surface, absorbs as it travels, and scatters along the way.
+
 ### Reflection (~4–7% of incident light)
 
-The sebum layer of the epidermis has a refractive index of about 1.5; air is about 1.0. The Fresnel equations give roughly 4–7% specular reflection at this interface — it's small, but it's what makes skin look glossy and what creates the highlight problems in any handheld imaging system.
+The sebum layer of the epidermis has a refractive index of about 1.5; air is about 1.0. The Fresnel equations give roughly 4–7% specular reflection at this interface, which is small but makes skin look glossy and what creates the highlight problems in any handheld imaging system.
 
-### Absorption — the part that depends on pigmentation
+### Absorption 
 
 Absorption is governed by the absorption coefficient $$\mu_a(\lambda)$$, and at visible wavelengths it's dominated by two chromophores:
 
