@@ -37,7 +37,18 @@ ninja.data = [{
           handler: () => {
             window.location.href = "/cv/";
           },
-        },{id: "post-skin-tone-optics-and-quantification-methods",
+        },{id: "post-monte-carlo-simulation-for-light-transport-in-tissue",
+        
+          title: "monte carlo simulation for light transport in tissue",
+        
+        description: "notes from my lab journal club on why Beer–Lambert and diffusion theory fail in turbid tissue, and how Monte Carlo&#39;s hop–drop–spin loop gives us a much better picture of where photons actually go inside skin.",
+        section: "Posts",
+        handler: () => {
+          
+            window.location.href = "/blog/2026/monte-carlo-light-transport-in-tissue/";
+          
+        },
+      },{id: "post-skin-tone-optics-and-quantification-methods",
         
           title: "Skin Tone Optics and Quantification Methods",
         
