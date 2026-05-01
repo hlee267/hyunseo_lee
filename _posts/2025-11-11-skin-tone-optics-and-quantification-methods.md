@@ -20,8 +20,9 @@ The bias arises because pulse oximetry uses two wavelengths (~660 nm red and ~94
 
 {% include figure.liquid
    loading="eager"
-   path="assets/img/_posts/skin-tone/hemoglobin.png"
+   path="assets/img/posts/skin-tone/hemoglobin.png"
    class="img-fluid rounded z-depth-1"
+   zoomable=true
    caption="Molar extinction coefficients of oxyhemoglobin (HbO₂) and deoxyhemoglobin (Hb), compiled by Scott Prahl from multiple sources. The vertical lines mark the 660 nm and 940 nm wavelengths used by pulse oximeters. Data: <a href=\"https://omlc.org/spectra/hemoglobin/\">omlc.org/spectra/hemoglobin</a>."
 %}
 
