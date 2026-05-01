@@ -39,9 +39,9 @@ ninja.data = [{
           },
         },{id: "post-monte-carlo-simulation-for-light-transport-in-tissue",
         
-          title: "monte carlo simulation for light transport in tissue",
+          title: "Monte Carlo Simulation for Light Transport in Tissue",
         
-        description: "notes from my lab journal club on why Beer–Lambert and diffusion theory fail in turbid tissue, and how Monte Carlo&#39;s hop–drop–spin loop gives us a much better picture of where photons actually go inside skin.",
+        description: "Journal club on why Beer–Lambert and diffusion theory fail in turbid tissue, and how Monte Carlo&#39;s hop–drop–spin loop gives us a much better picture of where photons actually go inside skin.",
         section: "Posts",
         handler: () => {
           
