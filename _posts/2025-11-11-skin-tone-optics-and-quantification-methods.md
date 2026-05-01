@@ -18,17 +18,36 @@ The motivating fact for the entire talk is a 2020 [retrospective study from the 
 
 The bias arises because pulse oximetry uses two wavelengths (~660 nm red and ~940 nm NIR) and assumes a fixed relationship between absorption ratios and arterial oxygen saturation. **Melanin in the epidermis violates that assumption**: it absorbs strongly at 660 nm and only weakly at 940 nm, so for darker-pigmented skin the red channel is disproportionately attenuated *before* the light ever reaches blood. The device can't tell the difference between "less hemoglobin in the optical path" and "more melanin in the optical path."
 
-{% include figure.liquid
-   loading="eager"
-   path="assets/img/posts/skin-tone/hemoglobin.png"
-   class="img-fluid rounded z-depth-1"
-   zoomable=true
-   caption="Molar extinction coefficients of oxyhemoglobin (HbO₂) and deoxyhemoglobin (Hb), compiled by Scott Prahl from multiple sources. The vertical lines mark the 660 nm and 940 nm wavelengths used by pulse oximeters. Data: <a href=\"https://omlc.org/spectra/hemoglobin/\">omlc.org/spectra/hemoglobin</a>."
-%}
+<div class="row justify-content-center">
+  <div class="col-md-8">
+    {% include figure.liquid
+       loading="eager"
+       path="assets/img/posts/skin-tone/hemoglobin.png"
+       class="img-fluid rounded z-depth-1"
+       zoomable=true
+       caption="Molar extinction coefficients of oxyhemoglobin (HbO₂) and deoxyhemoglobin (Hb), compiled by Scott Prahl from multiple sources. The vertical lines mark the 660 nm and 940 nm wavelengths used by pulse oximeters. Data: <a href=\"https://omlc.org/spectra/hemoglobin/\">omlc.org/spectra/hemoglobin</a>."
+    %}
+  </div>
+</div>
 
 This isn't an obscure problem. I run into the same issue building a smartphone-based [nailfold capillaroscopy](#) system for non-invasive hemoglobin estimation: I have to manually adjust exposure for darker-skinned subjects to keep capillary contrast within a usable range. The question that motivated the talk is: **how do we measure skin pigmentation objectively, so that we can correct for it rather than ignore it?**
 
 ## A 30-second tour of skin
+
+<div class="row align-items-center mt-3">
+    <div class="col-md-5 mb-3 mb-md-0">
+        {% include figure.liquid
+           loading="eager"
+           path="assets/img/posts/skin-tone/skin-layers.jpg"
+           class="img-fluid rounded z-depth-1"
+           zoomable=true
+        %}
+        <div class="caption">
+            Cross-section of human skin showing the epidermis, dermis,
+            and hypodermis. <em>Image: Don Bliss / National Cancer Institute (public domain).</em>
+        </div>
+    </div>
+    <div class="col-md-7">
 
 Skin is a layered, turbid medium. From the surface down:
 
@@ -36,8 +55,10 @@ Skin is a layered, turbid medium. From the surface down:
 - **Dermis** (~90% of total thickness): collagen-and-elastin matrix, vascularized — this is where **hemoglobin** lives, and where most of the optical path length accumulates.
 - **Hypodermis**: subcutaneous fat, larger nerves and vessels — mostly invisible to short-wavelength visible light.
 
-Light hitting skin does three things, in roughly this order: reflects off the surface, absorbs as it travels, and scatters along the way.
+    </div>
+</div>
 
+Light hitting skin does three things, in roughly this order: reflects off the surface, absorbs as it travels, and scatters along the way.
 ### Reflection (~4–7% of incident light)
 
 The sebum layer of the epidermis has a refractive index of about 1.5; air is about 1.0. The Fresnel equations give roughly 4–7% specular reflection at this interface — it's small, but it's what makes skin look glossy and what creates the highlight problems in any handheld imaging system.
