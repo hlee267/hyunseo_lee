@@ -1,22 +1,29 @@
 ---
 layout: post
-title: skin tone optics and quantification methods
+title: Skin Tone Optics and Quantification Methods
 date: 2025-11-11 12:00
-description: notes from my lab journal club on how light interacts with skin, why pulse oximeters under-perform on darkly pigmented patients, and how we can quantify skin pigmentation objectively.
+description: Journal club on how light interacts with skin, why pulse oximeters under-perform on darkly pigmented patients, and how we can quantify skin pigmentation objectively.
 tags: optics biophotonics colorimetry journal-club
 categories: notes
-featured: true
+featured: false
 toc:
   beginning: true
 ---
 
-I gave a journal club talk this fall on **skin tone optics and quantification methods** — how light interacts with skin, why that interaction is wavelength-dependent and pigmentation-dependent, and what tools we actually have to measure pigmentation objectively. This post is a written-up version of that talk for anyone who'd like the highlights without the slide deck.
+I gave a journal club talk on **skin tone optics and quantification methods**, more specifically how light interacts with skin, why that interaction is wavelength-dependent and pigmentation-dependent, and what tools we actually have to measure pigmentation objectively. This post is a written-up version of that talk for anyone who'd like the highlights without the slide deck.
 
 ## Why this matters
 
-The motivating fact for the entire talk is a 2020 [retrospective study from the University of Michigan](https://doi.org/10.1056/NEJMc2029240) showing a consistent **~2% measurement bias** in pulse oximetry between Black and white patients. The bias is small in absolute terms but matters clinically — it determines whether a patient is flagged as hypoxemic and whether they receive supplemental oxygen.
+The motivating fact for the entire talk is a 2020 [retrospective study from the University of Michigan](https://doi.org/10.1056/NEJMc2029240) showing a consistent **~2% measurement bias** in pulse oximetry between Black and white patients. The bias is small in absolute terms but matters clinically as it determines whether a patient is flagged as hypoxemic and whether they receive supplemental oxygen.
 
 The bias arises because pulse oximetry uses two wavelengths (~660 nm red and ~940 nm NIR) and assumes a fixed relationship between absorption ratios and arterial oxygen saturation. **Melanin in the epidermis violates that assumption**: it absorbs strongly at 660 nm and only weakly at 940 nm, so for darker-pigmented skin the red channel is disproportionately attenuated *before* the light ever reaches blood. The device can't tell the difference between "less hemoglobin in the optical path" and "more melanin in the optical path."
+
+{% include figure.liquid
+   loading="eager"
+   path="assets/img/_posts/skin-tone/hemoglobin.png"
+   class="img-fluid rounded z-depth-1"
+   caption="Molar extinction coefficients of oxyhemoglobin (HbO₂) and deoxyhemoglobin (Hb), compiled by Scott Prahl from multiple sources. The vertical lines mark the 660 nm and 940 nm wavelengths used by pulse oximeters. Data: <a href=\"https://omlc.org/spectra/hemoglobin/\">omlc.org/spectra/hemoglobin</a>."
+%}
 
 This isn't an obscure problem. I run into the same issue building a smartphone-based [nailfold capillaroscopy](#) system for non-invasive hemoglobin estimation: I have to manually adjust exposure for darker-skinned subjects to keep capillary contrast within a usable range. The question that motivated the talk is: **how do we measure skin pigmentation objectively, so that we can correct for it rather than ignore it?**
 
